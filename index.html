@@ -13,11 +13,14 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div class="container navbar">
+    <div class="par">
+       <div class="container navbar">
       <div>
         <p>Atanu Das</p>
       </div>
+
       <div>
         <ul class="list">
           <li><a href="#">Home</a></li>
@@ -26,14 +29,32 @@
           <!-- <li><a href="#">Works</a></li> -->
           <li class="dropdown">
             <a href="#">Contact ▾</a>
-            <ul class="dropdown-menu" style="top: 41px;">
+            <ul class="dropdown-menu" style="top: 41px">
               <li><a href="mailto:bittu.das2002@gmail.com">Email</a></li>
               <li><a href="tel:+918910411187">phone</a></li>
-              <li><a href="https://www.instagram.com/tee__totaler?igsh=MWwwZXJyeTF2NXpv">social media</a></li>
+              <li>
+                <a href="https://wa.me/+918910411187"> Whatsapp</a>
+              </li>
             </ul>
           </li>
         </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="mobile-menu">
+          <li><a href="#skill">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="mailto:bittu.das2002@gmail.com">Email</a></li>
+          <li><a href="tel:+918910411187">Phone</a></li>
+          <li>
+            <a href="https://wa.me/+918910411187" target="_blank"> Whatsapp </a>
+          </li>
+        </ul>
       </div>
+    </div>
     </div>
     <div id="hero">
       <div class="container">
@@ -41,24 +62,26 @@
           Hi,<br />
           i'am <span style="color: blue">Atanu</span><br />
           web Designer <br />
-          <a href="mailto:bittu.das2002@gmail.com"><button class="btn">Contact</button></a>
+          <a href="mailto:bittu.das2002@gmail.com"
+            ><button class="btn">Contact</button></a
+          >
           <!-- tel;8910411187 -->
         </div>
         <div class="photo">
           <div class="border">
-            <img class="del" src="img.jpeg" alt="" />
+            <img class="del" src="photos/img.jpeg" alt="" />
           </div>
         </div>
       </div>
       <div class="hjk">
         <div class="ftg">
           <a href="https://www.facebook.com/bittu.bittudas.5203/"
-            ><img class="logo" src="facebook.png" alt=""
+            ><img class="logo" src="photos/facebook.png" alt=""
           /></a>
           <a href="https://github.com/AtanuAi"
-            ><img class="logo" src="github.png" alt=""
+            ><img class="logo" src="photos/github.png" alt=""
           /></a>
-          <a href="#"><img class="logo" src="linkedin.png" alt="" /></a>
+          <a href="#"><img class="logo" src="photos/linkedin.png" alt="" /></a>
         </div>
       </div>
     </div>
@@ -66,14 +89,12 @@
     <!-- skill section -->
     <div id="skill">
       <div class="container skll">
-        <div><h1>Specialized On</h1></div>
+        <div>
+          <h1>Specialized On</h1>
+        </div>
       </div>
       <div class="container skll">
-        <img
-          cls
-          src="Gemini_Generated_Image_zfc91azfc91azfc9-Photoroom.png"
-          alt=""
-        />
+        <img cls src="photos/img3.png" alt="" />
       </div>
     </div>
 
@@ -95,7 +116,9 @@
               <div class="ch1">
                 <img class="nlk" src="top-right.png" alt="" />
               </div>
-              <div><p class="ch2">scale up</p></div>
+              <div>
+                <p class="ch2">scale up</p>
+              </div>
             </div>
           </div>
           <!-- <div class="container">
@@ -105,41 +128,102 @@
         </div>
       </div>
       <div class="about-photo child2">
-        <img class="thd" src="img2.png" alt="" />
+        <img class="thd" src="photos/img2.png" alt="" />
       </div>
       <div class="child3">
         <div class="card container">
-          <div class="ch1"><img src="interface.png" alt="" /></div>
+          <div class="ch1"><img src="photos/interface.png" alt="" /></div>
           <div class="ch2">
-            <span style="color: blue"><h3>Design Consulting</h3></span>
+            <span style="color: blue">
+              <h3>Design Consulting</h3>
+            </span>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
-              excepturi?
+              Expert web design consultancy delivering strategic digital
+              solutions for growing businesses.
             </p>
           </div>
         </div>
         <div class="card container">
-          <div class="ch1"><img src="contract.png" alt="" /></div>
+          <div class="ch1"><img src="photos/contract.png" alt="" /></div>
           <div class="ch2">
-            <span style="color: blue"><h3>Industrial Design</h3></span>
+            <span style="color: blue">
+              <h3>Industrial Design</h3>
+            </span>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
-              excepturi?
+              We create intelligent product designs focused on usability,
+              efficiency, and manufacturing success.
             </p>
           </div>
         </div>
         <div class="card container">
-          <div class="ch1"><img src="3d-modeling.png" alt="" /></div>
+          <div class="ch1"><img src="photos/3d-modeling.png" alt="" /></div>
           <div class="ch2">
-            <span style="color: blue"><h3>Prototype Design</h3></span>
+            <span style="color: blue">
+              <h3>Prototype Design</h3>
+            </span>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
-              excepturi?
+              Rapid prototype design turning creative concepts into testable,
+              user-ready solutions.
             </p>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- get in touch section -->
+
+    <div id="getInTouch">
+      <header class="content-header">
+        <h1>want to get in touch?<br />Drop me a line</h1>
+      </header>
+      <form
+        id="contentFrom"
+        class="content-from"
+        method="post"
+        action=""
+        novalidate
+      >
+        <div class="row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Enter your email "
+              required
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            rows="8"
+            placeholder="Enter your message"
+            required
+          ></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="sub-btn">Submit</button>
+          <div id="formStatus" class="status" aria-live="polite"></div>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
   </body>
   <footer>
     <!-- Footer Start -->
@@ -167,8 +251,9 @@
             </div> -->
             <div class="footer-content">
               <p>
-                Frontend-Snippets is 100% free production-ready code snippets
-                for front-end development.
+                Get fast, reliable prototype designs that transform imagination
+                into tangible products customers can experience, test, and
+                trust.
               </p>
             </div>
             <div class="footer-icons">
@@ -231,37 +316,21 @@
             <div class="footer-navbar-col">
               <h5>Solutions</h5>
               <ul>
-                <li><a href="#"> Marketing </a></li>
                 <li><a href="#"> Analyst </a></li>
                 <li><a href="#"> Insight </a></li>
-                <li><a href="#"> Commerce </a></li>
               </ul>
             </div>
             <div class="footer-navbar-col">
               <h5>Support</h5>
               <ul>
-                <li><a href="#"> Insight </a></li>
-                <li><a href="#"> Analyst </a></li>
                 <li><a href="#"> Marketing </a></li>
                 <li><a href="#"> Commerce </a></li>
-              </ul>
-            </div>
-            <div class="footer-navbar-col">
-              <h5>Company</h5>
-              <ul>
-                <li><a href="#"> Analyst </a></li>
-                <li><a href="#"> Commerce </a></li>
-                <li><a href="#"> Marketing </a></li>
-                <li><a href="#"> Insight </a></li>
               </ul>
             </div>
             <div class="footer-navbar-col">
               <h5>Legal</h5>
               <ul>
-                <li><a href="#"> Commerce </a></li>
-                <li><a href="#"> Analyst </a></li>
-                <li><a href="#"> Insight </a></li>
-                <li><a href="#"> Marketing </a></li>
+                <li><a href="#"> Policies </a></li>
               </ul>
             </div>
           </div>
