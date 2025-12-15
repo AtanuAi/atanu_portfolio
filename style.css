@@ -238,6 +238,8 @@ a {
   width: 50%;
   display: flex;
   justify-content: center;
+  position: relative;
+  right: -150px;
 }
 
 .border {
@@ -271,8 +273,7 @@ a {
 }
 
 .hjk {
-  margin-left: 5%;
-  padding-left: 70px;
+  margin-top: 5%;
 }
 
 .ftg {
@@ -359,7 +360,7 @@ a {
 .card {
   width: 400px;
   gap: 20px;
-  margin-top: 60px;
+  margin-top: 46px;
 }
 
 .nlk {
@@ -570,7 +571,7 @@ p {
   color: #111;
 }
 
-/* Header */
+
 .content-header h1 {
   text-align: center;
   font-size: 48px;
@@ -580,20 +581,20 @@ p {
   text-transform: none;
 }
 
-/* Form layout */
+
 .content-from {
   display: block;
   width: 100%;
 }
 
-/* Two inputs in one row */
+
 .content-from .row {
   display: flex;
   gap: 24px;
   margin-bottom: 20px;
 }
 
-/* Fields */
+
 .content-from .field {
   display: flex;
   flex-direction: column;
@@ -721,8 +722,9 @@ p {
     margin-top: 12px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
   }
-
+ 
   #skill {
     margin-top: 20px;
   }
@@ -883,7 +885,9 @@ p {
   .details {
     font-size: 1.8rem;
   }
-
+  .photo{
+    right: 0px;
+  }
   .btn {
     width: 120px;
     height: 38px;
@@ -895,6 +899,8 @@ p {
   }
   .ftg {
     gap: 18px;
+    justify-content: center;
+    margin-top: 1rem;
   }
   .about-photo.child2 {
     display: none;

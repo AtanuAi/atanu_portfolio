@@ -8,7 +8,6 @@ function toggleMenu() {
   burger.classList.toggle("open");
 }
 
-// Minimal client-side validation and fake submit (replace with real endpoint)
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contentFrom');
   if (!form) return;
@@ -31,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (status) { status.textContent = 'Please fill all fields before submitting.'; status.style.color = 'crimson'; }
       return;
     }
-
 
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!re.test(email)) {
@@ -56,19 +54,19 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Stick navbar to top while user is scrolling (both directions).
+
 document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.navbar');
   if (!nav) return;
 
-  const idleOffset = 20;   // offset at very top of page
-  const nearTop = 20;      // within this px treat as "top"
-  const scrollActiveTimeout = 120; // ms after last scroll to consider scrolling "stopped"
+  const idleOffset = 20;
+  const nearTop = 20; 
+  const scrollActiveTimeout = 120; 
 
   let isScrolling = false;
   let scrollTimer = null;
 
-  // ensure initial state
+
   if ((window.scrollY || 0) <= nearTop) {
     nav.classList.remove('stuck');
     nav.style.transform = `translateY(${idleOffset}px)`;
@@ -78,31 +76,64 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function onScrollStart() {
-    // as soon as user scrolls -> stick navbar to top
     if (!isScrolling) {
       isScrolling = true;
       nav.classList.add('stuck');
       nav.style.transform = 'translateY(0)';
     }
 
-    // clear previous timer
     if (scrollTimer) clearTimeout(scrollTimer);
-
-    // set a timer to consider scroll "stopped"
     scrollTimer = setTimeout(() => {
       isScrolling = false;
-      // if user ended scrolling and we are near top, restore idle offset
       if ((window.scrollY || 0) <= nearTop) {
         nav.classList.remove('stuck');
         nav.style.transform = `translateY(${idleOffset}px)`;
       } else {
-        // keep stuck at top after stop if not near top
         nav.classList.add('stuck');
         nav.style.transform = 'translateY(0)';
       }
     }, scrollActiveTimeout);
   }
 
-  // use passive listener for smoothness
   window.addEventListener('scroll', onScrollStart, { passive: true });
 });
+
+
+const messages = [
+    "Welcome to my website!",
+    "I am a Web Developer.",
+    "I create modern UI designs.",
+  ];
+
+  let msgIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+    const currentMsg = messages[msgIndex];
+    const displayedText = currentMsg.substring(0, charIndex);
+
+    document.getElementById("type").innerText = displayedText;
+
+    if (!isDeleting && charIndex < currentMsg.length) {
+      charIndex++;
+      setTimeout(typeEffect, 100); 
+    } 
+    else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      setTimeout(typeEffect, 50); 
+    } 
+    else {
+      
+      if (!isDeleting) {
+        isDeleting = true;
+        setTimeout(typeEffect, 1000); 
+      } else {
+        isDeleting = false;
+        msgIndex = (msgIndex + 1) % messages.length; 
+        setTimeout(typeEffect, 1000); 
+      }
+    }
+  }
+
+  typeEffect();
